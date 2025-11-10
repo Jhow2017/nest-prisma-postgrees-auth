@@ -28,4 +28,3 @@ GET {{baseUrl}}/auth/me
 Content-Type: {{contentType}}
 Authorization: Bearer {{signin.response.body.accessToken}}
 
-
