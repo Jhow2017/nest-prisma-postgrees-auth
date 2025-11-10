@@ -8,7 +8,7 @@ Content-Type: {{contentType}}
 
 {
   "name": "Jonathan Gama",
-  "email": "test@hotmail.com",
+  "email": "testing@hotmail.com",
   "password": "123465"
 }
 
@@ -18,7 +18,7 @@ Content-Type: {{contentType}}
 
 {
  "name": "Jonathan Gama",
-  "email": "test@hotmail.com",
+  "email": "testing@hotmail.com",
   "password": "123465"
 }
 
