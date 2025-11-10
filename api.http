@@ -8,20 +8,24 @@ Content-Type: {{contentType}}
 
 {
   "name": "Jonathan Gama",
-  "email": "testing@hotmail.com",
-  "password": "123465"
+  "email": "gama@hotmail.com",
+  "password": "123456"
 }
 
 ### POST /auth/signin
+# @name signin
 POST {{baseUrl}}/auth/signin
 Content-Type: {{contentType}}
 
 {
- "name": "Jonathan Gama",
-  "email": "testing@hotmail.com",
-  "password": "123465"
+  "name": "Jonathan Gama",
+  "email": "gama@hotmail.com",
+  "password": "123456"
 }
 
-### GET / (exemplo de requisição GET)
-GET {{baseUrl}}/
+### GET /auth/me
+GET {{baseUrl}}/auth/me
+Content-Type: {{contentType}}
+Authorization: Bearer {{signin.response.body.accessToken}}
+
 

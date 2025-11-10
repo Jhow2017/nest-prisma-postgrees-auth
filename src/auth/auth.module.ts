@@ -3,6 +3,7 @@ import { JwtModule } from '@nestjs/jwt';
 
 import { AuthService } from './auth.service';
 import { AuthController } from './auth.controller';
+import { AuthGuard } from './auth.guard';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { UserValidation } from 'src/common/validations/user.validation';
 import { jwtConstants } from './constants';
@@ -14,6 +15,6 @@ import { jwtConstants } from './constants';
     signOptions: { expiresIn: '60s' },
   })],
   controllers: [AuthController],
-  providers: [AuthService, PrismaService, UserValidation]
+  providers: [AuthService, AuthGuard, PrismaService, UserValidation]
 })
 export class AuthModule { }
