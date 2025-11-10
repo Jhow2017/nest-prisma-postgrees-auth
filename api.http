@@ -8,8 +8,8 @@ Content-Type: {{contentType}}
 
 {
   "name": "Jonathan Gama",
-  "email": "usuario@example.com",
-  "password": "senha123"
+  "email": "test@hotmail.com",
+  "password": "123465"
 }
 
 ### POST /auth/signin
@@ -17,9 +17,9 @@ POST {{baseUrl}}/auth/signin
 Content-Type: {{contentType}}
 
 {
-  "email": "usuario@example.com",
-  "password": "senha123",
-  "name": "Nome do Usuário"
+ "name": "Jonathan Gama",
+  "email": "test@hotmail.com",
+  "password": "123465"
 }
 
 ### GET / (exemplo de requisição GET)

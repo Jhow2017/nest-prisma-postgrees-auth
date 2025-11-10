@@ -8,13 +8,13 @@ export class AuthController {
 
     @Post('signup')
     async signup(@Body() body: SignupDto) {
-        await this.authService.signup(body);
-        return body;
+        const user = await this.authService.signup(body);
+        return user;
     }
 
     @Post('signin')
     async signin(@Body() body: SigninDto) {
-        await this.authService.signin(body);
-        return body;
+        const user = await this.authService.signin(body);
+        return user;
     }
 }
