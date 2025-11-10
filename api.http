@@ -1,0 +1,27 @@
+### Variáveis de ambiente (opcional)
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### POST /auth/signup
+POST {{baseUrl}}/auth/signup
+Content-Type: {{contentType}}
+
+{
+  "name": "Jonathan Gama",
+  "email": "usuario@example.com",
+  "password": "senha123"
+}
+
+### POST /auth/signin
+POST {{baseUrl}}/auth/signin
+Content-Type: {{contentType}}
+
+{
+  "email": "usuario@example.com",
+  "password": "senha123",
+  "name": "Nome do Usuário"
+}
+
+### GET / (exemplo de requisição GET)
+GET {{baseUrl}}/
+
