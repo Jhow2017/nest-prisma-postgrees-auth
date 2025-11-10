@@ -1,15 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { SigninDto, SignupDto } from './dtos/auth.dto';
+import { UserValidation } from 'src/common/validations/user.validation';
 
 @Injectable()
 export class AuthService {
-    async signup(body: SignupDto) {
-        console.log('body', body);
-        return body;
+    constructor(private userValidation: UserValidation) { }
+
+    async signup(data: SignupDto) {
+        await this.userValidation.checkEmailExists(data.email);
+        return data;
     }
 
-    async signin(body: SigninDto) {
-        console.log('body', body);
-        return body;
+    async signin(data: SigninDto) {
+        console.log('data', data);
+        return data;
     }
 }
